@@ -2,23 +2,23 @@
   "name": "orderflow",
   "version": "1.0.0",
   "description": "Async job queue backend — API accepts in milliseconds, worker processes in the background. BullMQ + Redis",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "MIT",
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/okandemir123/orderflow.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/okandemir123/orderflow/issues"
   },
   "homepage": "https://github.com/okandemir123/orderflow#readme",
+  "scripts": {
+    "api": "node src/api.js",
+    "worker": "node src/worker.js"
+  },
   "dependencies": {
-    "express": "^5.2.1"
+    "bullmq": "^6.3.11",
+    "express": "^5.2.1",
+    "ioredis": "^6.0.0"
   }
 }
